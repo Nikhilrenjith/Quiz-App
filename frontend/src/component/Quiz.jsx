@@ -1,7 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Question from "./Question";
 
+/* Redux */
+import { useSelector } from "react-redux";
+
 const Quiz = () => {
+  const state = useSelector((state) => state);
+
+  useEffect(() => {
+    console.log(state);
+  });
+
   const prev = () => {
     console.log("on prev click");
   };

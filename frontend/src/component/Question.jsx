@@ -15,7 +15,7 @@ const Question = () => {
   return (
     <div className="questions">
       <h2 className=" text-light">{question.question}</h2>
-      <ul>
+      <ul key={question.id}>
         {question.options.map((q, i) => (
           <li key={i}>
             <input
